@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+script_dir="$(dirname "$(readlink -f "$0")")"
 cd "${script_dir}"
 if [ -f ".coverage" ]
 then
